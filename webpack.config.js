@@ -25,10 +25,19 @@ module.exports = {
       {
         test: /\.svelte$/,
         use: {
-          loader: 'svelte-loader',
+          loader: 'svelte-loader-hot',
           options: {
             emitCss: true,
             hotReload: true,
+            hotOptions: {
+              // whether to preserve local state (i.e. any `let` variable) or
+              // only public props (i.e. `export let ...`)
+              noPreserveState: false,
+              // optimistic will try to recover from runtime errors happening
+              // during component init. This goes funky when your components are
+              // not pure enough.
+              optimistic: true,
+            },
           },
         },
       },
@@ -52,4 +61,9 @@ module.exports = {
     }),
   ],
   devtool: prod ? false : 'source-map',
+  devServer: {
+    contentBase: 'public',
+    hot: true,
+    overlay: true,
+  },
 }

@@ -1,64 +1,41 @@
-# svelte app
+# Svelte Template Hot
 
-This is a project template for [Svelte](https://svelte.dev) apps. It lives at https://github.com/sveltejs/template-webpack.
+This is a copy of official [Svelte template for Webpack](https://github.com/sveltejs/template-webpack) with added HMR support.
+
+This template aims to remain as close to the official template as possible. Please refer to official docs for general usage. For HMR specific stuff, see bellow!
+
+## Status: experimental
+
+HMR is not officially supported by Svelte yet. Progress can be tracked in [this issue](https://github.com/sveltejs/svelte/issues/3632).
+
+The HMR implementation used in this template is provided by [svelte-loader-hot](https://github.com/rixo/svelte-loader-hot). It relies on some private Svelte APIs to work. **This means that HMR can be broken by any new version of Svelte.** Although, in practice, that hasn't happened that often until now, and it has always been fixable.
+
+Pending official support, please report your HMR issues to [svelte-loader-hot's tracker](https://github.com/rixo/svelte-loader-hot/issues) (or in this template, if you feel that's more appropriate).
+
+## Installation
 
 To create a new project based on this template using [degit](https://github.com/Rich-Harris/degit):
 
 ```bash
-npx degit sveltejs/template-webpack svelte-app
-cd svelte-app
-```
-
-*Note that you will need to have [Node.js](https://nodejs.org) installed.*
-
-
-## Get started
-
-Install the dependencies...
-
-```bash
+npx degit rixo/svelte-template-webpack-hot svelte-app
 cd svelte-app
 npm install
 ```
 
-...then start webpack:
+Run the build script a first time, in order to avoid 404 errors about missing `bundle.css` in the browser:
+
+```bash
+npm run build
+```
+
+## Quick start
 
 ```bash
 npm run dev
 ```
 
-Navigate to [localhost:8080](http://localhost:8080). You should see your app running. Edit a component file in `src`, save it, and the page should reload with your changes.
+Navigate to http://localhost:8080. You should see your app running. Edit a component file in `src`, save it, and... Eyeball!
 
+## Usage / Add it to your project
 
-## Deploying to the web
-
-### With [now](https://zeit.co/now)
-
-Install `now` if you haven't already:
-
-```bash
-npm install -g now
-```
-
-Then, from within your project folder:
-
-```bash
-now
-```
-
-As an alternative, use the [Now desktop client](https://zeit.co/download) and simply drag the unzipped project folder to the taskbar icon.
-
-### With [surge](https://surge.sh/)
-
-Install `surge` if you haven't already:
-
-```bash
-npm install -g surge
-```
-
-Then, from within your project folder:
-
-```bash
-npm run build
-surge public
-```
+TODO
