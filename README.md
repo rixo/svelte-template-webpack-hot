@@ -4,11 +4,9 @@ This is a copy of official [Svelte template for Webpack](https://github.com/svel
 
 This template aims to remain as close to the official template as possible. Please refer to official docs for general usage. For HMR specific stuff, see bellow!
 
-## Status: experimental
+**:warning: Experimental :warning:**
 
-HMR is not officially supported by Svelte yet. Progress can be tracked in [this issue](https://github.com/sveltejs/svelte/issues/3632).
-
-The HMR implementation used in this template is provided by [svelte-loader-hot](https://github.com/rixo/svelte-loader-hot). It relies on some private Svelte APIs to work. **This means that HMR can be broken by any new version of Svelte.** Although, in practice, that hasn't happened that often until now, and it has always been fixable.
+This HMR implementation relies on Svelte's private & non documented API. This means that it could stop working with any new version of Svelte.
 
 Pending official support, please report your HMR issues to [svelte-loader-hot's tracker](https://github.com/rixo/svelte-loader-hot/issues) (or in this template, if you feel that's more appropriate).
 
