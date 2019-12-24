@@ -3,6 +3,7 @@ const path = require('path')
 
 const mode = process.env.NODE_ENV || 'development'
 const prod = mode === 'production'
+const dev = !prod
 
 module.exports = {
   entry: {
@@ -27,7 +28,7 @@ module.exports = {
         use: {
           loader: 'svelte-loader-hot',
           options: {
-            emitCss: true,
+            dev,
             hotReload: true,
             hotOptions: {
               // whether to preserve local state (i.e. any `let` variable) or
