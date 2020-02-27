@@ -38,6 +38,10 @@ module.exports = {
               // during component init. This goes funky when your components are
               // not pure enough.
               optimistic: true,
+
+              // See docs of svelte-loader-hot for all available options:
+              //
+              // https://github.com/rixo/svelte-loader-hot#usage
             },
           },
         },
