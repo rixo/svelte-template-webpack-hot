@@ -8,7 +8,7 @@
     "serve": "11",
     "style-loader": "^1.1.3",
     "svelte": "~3.19.1",
-    "svelte-loader-hot": "^0.2.1",
+    "svelte-loader-hot": "^0.3.0",
     "webpack": "^4.41.6",
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.10.3"
